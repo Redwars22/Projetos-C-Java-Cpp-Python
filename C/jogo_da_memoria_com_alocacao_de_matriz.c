@@ -25,11 +25,11 @@ int main()
     printf("JOGO DA MEMÓRIA\n\nESCOLHA O NÍVEL DE DIFICULDADE:\n");
     printf("1-EASY(4x4)\n2-HARD(8x8)\nEscolha->");
     scanf("%d", &choice);
-    
+
     //Caso um número inválido seja inserido, o jogo considerará como 2
     if(choice != 1 && choice != 2)
         choice = 2;
-    
+
     switch(choice){
         case 1:
             n = EASY_MODE;
@@ -54,18 +54,34 @@ void game(int rows, int columns){
     system("clear");
 
     M = (int**) malloc(rows * sizeof(int*));
-    
+
     for(int i = 0; i < rows; i++){
         M[i] = (int*) malloc(columns * sizeof(int*));
     }
-    
-    for (int j = 0; j < rows; j++){
-        for(int k = 0; k < columns; k++){
-            //Se o índice é par, então o valor de M[j][k] é 1, do contrário é 0
-            if((j % 2) == 0 && (k % 2) == 0){
-                M[j][k] = 1;
-            } else {
-                M[j][k] = 0;
+
+    //Preenche a matriz com valores
+    if(gameMode == 'E'){
+        for (int j = 0; j < rows; j++){
+            for(int k = 0; k < columns; k++){
+                //Se o índice é par, então o valor de M[j][k] é 1, do contrário é 0
+                if((j % 2) == 0 && (k % 2) == 0){
+                    M[j][k] = 1;
+                } else {
+                    M[j][k] = 0;
+                }
+            }
+        }
+    } else {
+        for (int j = 0; j < rows; j++){
+            for(int k = 0; k < columns; k++){
+                //Se o índice é par, então o valor de M[j][k] é 1, do contrário é 0
+                if((j % 2) == 0 && (k % 2) == 0){
+                    M[j][k] = 1 * j;
+                } else if(j == k) {
+                    M[j][k] = j + k;
+                } else {
+                    M[j][k] = j * k;
+                }
             }
         }
     }
@@ -86,7 +102,7 @@ void easyMode(int rows, int columns){
     //Printa a matriz
     for(int l = 0; l < rows; l++){
         for(int p = 0; p < columns; p++){
-            printf("%d", M[l][p]);
+            printf("%d  ", M[l][p]);
             if(p == (columns - 1))
                 printf("\n");
         }
@@ -137,7 +153,7 @@ void hardMode(int rows, int columns){
     //Printa a matriz
     for(int l = 0; l < rows; l++){
         for(int p = 0; p < columns; p++){
-            printf("%d", M[l][p]);
+            printf("%d  ", M[l][p]);
             if(p == (columns - 1))
                 printf("\n");
         }
