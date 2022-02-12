@@ -134,9 +134,52 @@ void easyMode(int rows, int columns){
 }
 
 void hardMode(int rows, int columns){
+    //Printa a matriz
     for(int l = 0; l < rows; l++){
         for(int p = 0; p < columns; p++){
             printf("%d", M[l][p]);
+            if(p == (columns - 1))
+                printf("\n");
         }
     }
+
+    //Espera o usuário memorizar a matriz e decidir continuar
+    do {
+        printf("\nDigite 1 para continuar... \n->");
+        scanf("%d", &argument);
+    } while(argument != 1);
+
+    if(argument == 1)
+        system("clear");
+
+    //Seta o mínimo e o máximo do índice da matriz
+    upper = (HARD_MODE - 1);
+    lower = 0;
+
+    //A parte do jogo em si
+    for(int arg = 0; arg < 16; arg++){
+        index_i = (rand() % (upper - lower + 1)) + lower;
+        index_j = (rand() % (upper - lower + 1)) + lower;
+
+        printf("\nValor de M[%d][%d]: ", index_i, index_j);
+        scanf("%d", &value);
+        if(value == M[index_i][index_j]){
+            printf("CORRETO!!! +5 pontos");
+            score += 5;
+        } else {
+            printf("ERRADO!!!");
+        }
+    }
+
+    //Exibe a pontuação total e espera o usuário digitar algo para retornar ao menu principal
+    system("clear");
+    printf("\nPONTUAÇÃO TOTAL: %d", score);
+    do {
+        printf("\nDigite 1 para continuar... \n->");
+        scanf("%d", &argument);
+    } while(argument != 1);
+
+    if(argument == 1)
+        system("clear");
+        main();
 }
