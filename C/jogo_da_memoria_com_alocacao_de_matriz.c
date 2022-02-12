@@ -144,9 +144,10 @@ void easyMode(int rows, int columns){
         scanf("%d", &argument);
     } while(argument != 1);
 
-    if(argument == 1)
+    if(argument == 1){
         system("clear");
         main();
+    }
 }
 
 void hardMode(int rows, int columns){
@@ -195,7 +196,8 @@ void hardMode(int rows, int columns){
         scanf("%d", &argument);
     } while(argument != 1);
 
-    if(argument == 1)
+    if(argument == 1){
         system("clear");
         main();
+    }
 }
