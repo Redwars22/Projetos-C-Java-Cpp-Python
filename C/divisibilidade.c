@@ -6,7 +6,7 @@ int divisor, dividendo;
 
 int main()
 {
-    printf("");
+    printf("É DIVISÍVEL OU NÃO? DESCUBRA AQUI!\n\n");
 
     while(true){
         printf("DIVIDENDO: ");
@@ -18,6 +18,6 @@ int main()
         if(dividendo % divisor != 0) printf("Não é divisível!");
         printf("\n------------------------------\n");
     }
-    
+
     return 0;
 }
