@@ -18,5 +18,6 @@
         "titleBar.inactiveBackground": "#032f9b99",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#032f9b"
+    "peacock.color": "#032f9b",
+    "C_Cpp.errorSquiggles": "Enabled"
 }
