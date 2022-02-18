@@ -7,7 +7,7 @@ char text[2000];
 int main()
 {
     system("clear");
-    printf("EDITOR DE TEXTO EM C\n");
+    printf("##########[ EDITOR DE TEXTO EM C ]##########\n");
     printf("Ao terminar de digitar, pressione ENTER para salvar.\n");
     drawLine(50);
     writeToFile();
