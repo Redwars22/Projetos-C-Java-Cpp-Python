@@ -9,6 +9,8 @@ public class Main {
             int elements = readNum.nextInt();
             String average = getValues(elements);
             System.out.print("A média é: " + average + "\n\n");
+            for(int i = 0; i < 35; i++) System.out.print("-");
+            System.out.println();
         }
     }
 
