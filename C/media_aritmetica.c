@@ -21,7 +21,7 @@ int main()
             scanf("%d", &aux);
             sum += aux;
         }
-        
+
         result = (sum / total);
         printf("Média: %d\n", result);
     }

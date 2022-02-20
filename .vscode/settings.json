@@ -19,5 +19,8 @@
         "titleBar.inactiveForeground": "#e7e7e799"
     },
     "peacock.color": "#2a3f61",
-    "C_Cpp.errorSquiggles": "Enabled"
+    "C_Cpp.errorSquiggles": "Enabled",
+    "Lua.diagnostics.globals": [
+        "text"
+    ]
 }
