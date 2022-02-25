@@ -1,3 +1,6 @@
+--Conversor de Dólar para Roblux, uma moeda fictícia
+--cuja cotação é 1.53;
+
 currency = 1.53;
 
 function GetKey()
