@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Projetos-C-Java-Cpp-Python_9355ee64"
+        },
+        {
             "name": "gcc-11 - Criar e depurar o arquivo ativo",
             "type": "cppdbg",
             "request": "launch",

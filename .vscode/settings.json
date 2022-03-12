@@ -22,5 +22,9 @@
     "C_Cpp.errorSquiggles": "Enabled",
     "Lua.diagnostics.globals": [
         "text"
+    ],
+    "java.project.sourcePaths": [
+        "Java/Média Aritmética",
+        "Java/Random"
     ]
 }
