@@ -9,6 +9,8 @@ char **tab = NULL;
 int aux = 0, level;
 
 void generateGame(int, int);
+void saveBoard();
+void game();
 
 int main(int argc, char const *argv[])
 {
