@@ -2,8 +2,8 @@ function getRandomNumber(amount, min, max)
     os.execute("clear")
     print("NÚMEROS SORTEADOS: ")
     while amount > 0 do
-        print(math.random(min, max) .. ", ")
-        amount = amount + 1
+        io.write(math.random(min, max) .. ", ")
+        amount = amount - 1
     end
 end
 
@@ -16,3 +16,4 @@ min = io.read("n")
 print("MÁXIMO: ")
 max = io.read("n")
 getRandomNumber(amount, min, max)
+print("\n")
