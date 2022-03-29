@@ -25,6 +25,6 @@
     ],
     "java.project.sourcePaths": [
         "Java/Média Aritmética",
-        "Java/Random"
+        "Java/Gerador de Link WhatsApp com GUI"
     ]
 }
